@@ -1,7 +1,6 @@
 import Header from "./components/header";
 import Slider from "./components/slider";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/font.css';
 import './styles/main.scss';
 import {Col, Row} from "react-bootstrap";
 import kitchen from "./assets/images/what we do.png";
