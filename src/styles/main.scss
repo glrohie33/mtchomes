@@ -1,17 +1,20 @@
-@import url("https://allfont.net/allfont.css?fonts=roboto-regular");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import "colors";
 
 *{
-  font-family: "Roboto Regular",arial;
+  font-family: "Roboto",arial;
 }
+
 
 .icon{
   cursor: pointer !important;
 }
 
+
+
 @for $i from 1 through 6{
   h#{$i}{
-    font-family: "Helvetica-Bold";
+    font-family: "Helvetica-Bold",Helvetica;
     color: $_light_black;
   }
 }
