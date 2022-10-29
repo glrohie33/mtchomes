@@ -1,0 +1,145 @@
+@import "colors";
+.top-slider{
+  .awssld{
+    max-height: 100vh;
+    .awssld__bullets{
+      bottom: 30px;
+      z-index: 999;
+
+      img{
+        max-height: 100vh;
+      }
+      button{
+        height: 3px;
+        border-radius: 3px;
+        background: $_white;
+        margin-right: 0;
+        width: 20px;
+      }
+
+      .awssld__bullets--active{
+        background: $_gold;
+        transform: unset;
+      }
+    }
+  }
+  .awssld--active{
+    max-height: 100vh;
+  }
+    .slide{
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      left: 0;
+
+      .inner-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        p{
+          color: $_white;
+          font-size: 12px;
+          max-width: 300px;
+          text-align: center;
+          margin-bottom: 0;
+          text-transform: uppercase;
+        }
+
+        h3{
+          font-size: 21px;
+          max-width: 360px;
+          text-align: center;
+          margin-bottom: 18px;
+        }
+
+        .btn{
+          height: 40px;
+          padding: 0px 20px;
+          font-size: 13px;
+          text-transform: uppercase;
+
+        }
+
+      }
+    }
+
+  .awssld__controls{
+    //display: none;
+  }
+}
+
+
+.awssld__controls__arrow-left:before, .awssld__controls__arrow-left:after, .awssld__controls__arrow-right:before, .awssld__controls__arrow-right:after{
+  background: $_gold;
+}
+
+@media (min-width: 768px) {
+  .awssld{
+    .awssld__bullets{
+      button{
+        height: 3px !important;
+        margin-right: 2px !important;
+        width: 30px !important;
+      }
+    }
+  }
+  .inner-content{
+    p{
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    h3{
+      font-size: 30px !important;
+      max-width: 500px !important;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .btn{
+      height: 60px;
+      padding: 0px 60px;
+      font-size: 15px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+@media (min-width: 1024px) {
+
+  .awssld{
+    .awssld__bullets{
+      button{
+        height: 5px !important;
+        margin-right: 5px !important;
+        width: 50px !important;
+      }
+    }
+  }
+  .inner-content{
+    p{
+      font-size: 14px;
+      letter-spacing: 3px;
+      max-width: unset !important;
+    }
+
+    h3{
+       font-size: 50px !important;
+       max-width: 686px !important;
+       text-align: center;
+       margin-bottom: 30px !important;
+     }
+
+    .btn{
+      height: 60px !important;
+      padding: 0px 60px !important;
+      font-size: 15px;
+      text-transform: uppercase;
+    }
+  }
+
+}

@@ -1,0 +1,198 @@
+@import "colors";
+header{
+    top: 0;
+    width:100%;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+
+
+    .top-icons,.cart-area{
+        display: flex;
+        align-items: center;
+    }
+        a,button{
+            text-transform: uppercase !important;
+            color: $_white !important;
+            font-size: 13px !important;
+            letter-spacing: 2px;
+            padding: 5px 8px;
+            cursor: pointer;
+        }
+
+
+    .header-container{
+        width: 100%;
+
+        margin: 0 !important;
+
+        .icon{
+            color: $_white;
+            margin: 10px;
+        }
+
+        .desktop-header{
+            padding:30px 0;
+            width: 90%;
+            max-width: 1300px;
+            display: none;
+            border-bottom: 1px solid rgba($_white,0.3);
+            nav{
+                display: flex;
+                align-items: center;
+                height: 100%;
+
+                .menu{
+                    display: flex;
+                    margin: 0 !important;
+                    display: none;
+                }
+
+                .menu-right{
+                    justify-content: right;
+                    display: none;
+                }
+                .logo-cover{
+                    text-align: center;
+                    flex-grow: 1;
+                    img{
+                        height: 32px;
+                        width: unset;
+                    }
+                }
+            }
+
+            .cart-area{
+                display: flex;
+                justify-content: right;
+                .btn{
+                    height: 50px;
+                    padding: 0px 30px;
+
+                    svg{
+                        margin-left: 5px;
+                        height: 13px;
+                        width: unset;
+                    }
+                }
+            }
+        }
+
+        .mobile-header{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            background: $_black ;
+            padding: 10px;
+            .logo-cover{
+                width: 100%;
+                text-align: center;
+                img{
+                    height: 30px;
+                    width: unset;
+                }
+            }
+
+            .icon{
+                width: 20px;
+                cursor: pointer;
+            }
+
+            .mobile-nav{
+                position: fixed;
+                left: -100%;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.8);
+                z-index: 9999999;
+                transition: 0.5s;
+                .mobile-menu-cover{
+                    width: 90%;
+                    background: $_black;
+                    max-width: 400px;
+                    height: 100%;
+                    position: relative;
+                    padding: 30px 0px;
+                    .logo-cover{
+                        margin:20px  0px 30px;
+                    }
+
+                    .menu{
+                        margin-bottom: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        li{
+                            margin: 0px !important;
+                            border-bottom: 1px solid rgba($_light_grey,0.6);
+                        }
+                        a{
+                            padding: 10px;
+                            font-size: 16px !important;
+                            display: block;
+                            text-align: center;
+                        }
+
+
+                    }
+
+                    .icons{
+                        width: 100%;
+                        text-align: center;
+                    }
+                    .close-nav{
+                        position: absolute;
+                        top: 0px;
+                        right: 5px;
+                    }
+                }
+
+            }
+
+            .mobile-nav.open{
+                left: 0px;
+                transition: 0.5s;
+            }
+        }
+
+
+
+    }
+
+
+
+}
+
+@media (min-width: 760px) {
+    
+}
+
+@media(min-width: 1224px){
+    header{
+        position: absolute;
+        .header-container{
+            display: flex;
+            justify-content: center;
+            .mobile-header{
+                display: none !important;
+            }
+
+            .desktop-header{
+                display: flex !important;
+                .menu{
+                    display: flex !important;
+                }
+            }
+
+        }
+        .mobile-menu-button{
+            display: none;
+        }
+
+    }
+}
+
+@media (min-width: 1224px) {
+
+}
+
